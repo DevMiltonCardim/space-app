@@ -42,8 +42,8 @@ const App = () => {
 
   useEffect(() => {
     const fotosFiltradas = fotos.filter(foto => {
-      const filtroPorTag = !tag || foto.tag === tag;
-      const filtroPorTitulo = !filtro || foto.titulo.loLowerCase().includes(filtro.toLowerCase())
+      const filtroPorTag = !tag || foto.tagId === tag;
+      const filtroPorTitulo = !filtro || foto.titulo.toLowerCase().includes(filtro.toLowerCase())
       return filtroPorTag && filtroPorTitulo
     })
     setFotosDaGaleria(fotosFiltradas)

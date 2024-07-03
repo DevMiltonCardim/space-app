@@ -30,7 +30,7 @@ const Tag = styled.button`
     }
 `
 
-const Tags = ({ setTag }) => {
+const Tags = ({ setTag, foto = [] }) => {
     return <TagPai>
             <TagTitulo>Busque por tags:</TagTitulo>
             {tags.map(tag => <Tag key={tag.id} onClick={() => setTag(tag.tag)}>{tag.titulo}</Tag>)}
